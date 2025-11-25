@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Prosty Dziennik Szkolny</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Prosty Dziennik Szkolny</h1>
+    <form id="entryForm">
+      <input id="student" placeholder="Imię i nazwisko" required>
+      <input id="subject" placeholder="Przedmiot" required>
+      <input id="grade" placeholder="Ocena" required>
+      <input id="date" type="date" required>
+      <input id="notes" placeholder="Uwagi">
+      <button type="submit">Dodaj wpis</button>
+    </form>
+
+    <div class="controls">
+      <button id="exportCsv">Eksportuj CSV</button>
+      <button id="importCsvBtn">Importuj CSV</button>
+      <input id="importCsv" type="file" accept=".csv" style="display:none">
+      <button id="clearAll">Wyczyść wszystkie</button>
+    </div>
+
+    <table id="table">
+      <thead><tr><th>#</th><th>Uczeń</th><th>Przedmiot</th><th>Ocena</th><th>Data</th><th>Uwagi</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
